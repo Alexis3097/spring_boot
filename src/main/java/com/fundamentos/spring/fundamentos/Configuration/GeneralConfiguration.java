@@ -17,7 +17,6 @@ public class GeneralConfiguration {
     @Value("${value.random}")
     private String random;
 
-
     @Bean
     public MyBeanWithProperties function(){
         return new MyBeanWithPropertiesImplements(name, apellido);
