@@ -1,10 +1,12 @@
 package com.fundamentos.spring.fundamentos.Configuration;
 
 import com.fundamentos.spring.fundamentos.bean.*;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
+
 public class MyConfigurationBean {
     @Bean
     public MyBean beanOperation() {
