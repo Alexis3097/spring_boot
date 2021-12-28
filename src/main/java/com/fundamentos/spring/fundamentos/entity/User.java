@@ -13,11 +13,16 @@ public class User {
     public User() {
     }
 
+    public User(Long id) {
+        this.id = id;
+    }
+
     public User(String name, String email, LocalDate birthDate) {
         this.name = name;
         this.email = email;
         this.birthDate = birthDate;
     }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false, unique = true)
@@ -26,7 +31,7 @@ public class User {
     @Column(length = 50, name = "name")
     private String name;
 
-    @Column(length = 50, name = "email")
+    @Column(length = 50, name = "email", unique = true)
     private String email;
 
     @Column(name = "birthDate")
